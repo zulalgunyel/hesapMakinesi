@@ -1,0 +1,20 @@
+def hesapla(a,b,islem):
+    if islem not in "+-/*":
+        return "lütfen şu işlemlerden birini girin: +-/*"
+    if islem == "+" :
+        return (str(a) + str(b) + str(a+b))
+    if islem == "-" :
+        return (str(a) + str(b) + str(a-b))
+    if islem == "/" :
+        return (str(a) + str(b) + str(a/b))
+    if islem == "*" :
+        return (str(a) + str(b) + str(a*b))
+while True: 
+    try:
+        a = int(input("1. sayıyı giriniz"))
+        b = int(input("2.sayıyı giriniz"))
+
+        islem = str(input("işlemi seç: +-/*"))
+        print(hesapla(a,b,islem))
+    except:
+        print("lütfen sayıları düzgün giriniz")
